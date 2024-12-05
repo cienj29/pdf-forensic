@@ -18,7 +18,7 @@ banner()
 # Function to start metadata extraction
 def printMeta(filename):
 	try:
-		pdfFile = PdfFileReader(open(filename, 'rb'))
+		pdfFile = PdfReader(open(filename, 'rb'))
 		docInfo = pdfFile.metadata
 		
 		print(f'[*] PDF MetaData for: {filename}')
