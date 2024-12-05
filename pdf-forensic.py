@@ -23,7 +23,7 @@ def printMeta(filename):
 		print('[+] ' + metaItem + ': ' + docInfo[metaItem])
 
 def main():
-	parser = oargparse.ArgumentParser('usage program: -F <PDF file name>')
+	parser = argparse.ArgumentParser('usage program: -F <PDF file name>')
 	parser.add_option('-F', dest='fileName', type='string',\
 		help='Please specify the PDF File name')
 	(options, args) = parser.parse_args()
