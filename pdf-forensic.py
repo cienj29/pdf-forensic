@@ -23,13 +23,12 @@ def printMeta(filename):
 		print('[+] ' + metaItem + ': ' + docInfo[metaItem])
 
 def main():
-	parser = argparse.ArgumentParser('usage program: -F <PDF file name>')
-	parser.add_option('-F', dest='fileName', type='string',\
-		help='Please specify the PDF File name')
-	(options, args) = parser.parse_args()
-	fileName = options.fileName
-	if fileName == None:
-		print(parser.usage)
+	parser = argparse.ArgumentParser(description='Usage program: -F <PDF file name>')
+	parser.add_argument('-F', dest='fileName', type='str', help='Please specify the PDF File name')
+	args = parser.parse_args()
+	fileName = args.fileName
+	if not fileName:
+		print(parser.print_help())
 		exit(0)
 	else:
 		printMeta(fileName)
