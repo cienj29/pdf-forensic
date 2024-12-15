@@ -27,6 +27,8 @@ python pdf-forensic.py -F <File Name>
 [2024 UPDATE] Download .py file and open terminal. Run command: 
 python3 pdf-forensic.py -F /your/path/to/FileName.pdf
 
+[2024 UPDATE] Metadata is automatically saved to text file as <PDF_filename>_metadata.txt
+
 Examples
 ========
 python pdf-forensic.py -F test.pdf
