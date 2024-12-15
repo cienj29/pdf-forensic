@@ -41,10 +41,10 @@ def printMeta(filename):
 			for metaItem, value in docInfo.items():
 				print(f'[+] {metaItem}: {value}')
 		#Save metadata to text file
-		save_metadata_to_text(filename, docInfo)
+			save_metadata_to_text(filename, docInfo)
 		else:
-		print('[!] No metadata found in this PDF.')
-		save_metadata_to_text(filename, None)
+			print('[!] No metadata found in this PDF.')
+			save_metadata_to_text(filename, None)
 	except FileNotFoundError:
 		print(f"Error: File '{filename}' is not found.")
 	except Exception as e:
